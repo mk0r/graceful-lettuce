@@ -6,7 +6,7 @@ webhook_url: https://api.stackbit.com/project/5d86b84eda2ce30015257928/webhook/f
 sections:
 - type: document
   path: _data/metadata.json
-  label: Site Metadata
+  label: ℹ️ Site Metadata
   templates:
   - metadata
 - type: document
