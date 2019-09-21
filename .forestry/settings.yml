@@ -2,50 +2,56 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: static/admin
-webhook_url: 'https://api.stackbit.com/project/5d86b84eda2ce30015257928/webhook/forestry'
+webhook_url: https://api.stackbit.com/project/5d86b84eda2ce30015257928/webhook/forestry
 sections:
-  - type: document
-    label: Site Metadata
-    path: _data/metadata.json
-    templates:
-      - metadata
-  - type: document
-    label: Home
-    path: pages/home.md
-    templates:
-      - home
-  - type: directory
-    path: pages
-    match: '**/*'
-    exclude: '{home.md,blog.md,contact.md,pages/home.md,pages/blog.md,pages/contact.md}'
-    label: Page
-    create: all
-    templates:
-      - page
-  - type: document
-    label: Blog Post
-    path: pages/blog.md
-    templates:
-      - blog
-  - type: document
-    label: Contact
-    path: pages/contact.md
-    templates:
-      - contact
-  - type: directory
-    path: posts
-    match: '**/*'
-    label: Post
-    create: all
-    templates:
-      - post
-  - type: document
-    label: 404 Page
-    path: 404.md
-    templates:
-      - not_found
+- type: document
+  path: _data/metadata.json
+  label: Site Metadata
+  templates:
+  - metadata
+- type: document
+  path: pages/home.md
+  label: Home
+  templates:
+  - home
+- type: directory
+  path: pages
+  label: Page
+  create: all
+  match: "**/*"
+  exclude: "{home.md,blog.md,contact.md,pages/home.md,pages/blog.md,pages/contact.md}"
+  templates:
+  - page
+- type: document
+  path: pages/blog.md
+  label: Blog Post
+  templates:
+  - blog
+- type: document
+  path: pages/contact.md
+  label: Contact
+  templates:
+  - contact
+- type: directory
+  path: posts
+  label: Post
+  create: all
+  match: "**/*"
+  templates:
+  - post
+- type: document
+  path: 404.md
+  label: 404 Page
+  templates:
+  - not_found
 upload_dir: static/img
-public_path: /img
+public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ':filename:'
+file_template: ":filename:"
+build:
+  preview_output_directory: public
+  install_dependencies_command: npm install
+  preview_docker_image: node:10
+  mount_path: "/srv"
+  instant_preview_command: npm run forestry:preview

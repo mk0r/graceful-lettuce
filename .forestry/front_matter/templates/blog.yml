@@ -1,29 +1,29 @@
 ---
 label: Blog Post
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Title
-  - type: datetime
-    name: date
-    label: Date
-  - type: text
-    name: permalink
-    label: Permalink
-    description: URL of the page
-  - type: text
-    name: navtitle
-    label: Navigation item title
-  - type: list
-    name: tags
-    label: Tags
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: layouts/blog.njk
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+- type: datetime
+  name: date
+  label: Date
+- type: text
+  name: permalink
+  label: Permalink
+  description: URL of the page
+- type: text
+  name: navtitle
+  label: Navigation item title
+- type: list
+  name: tags
+  label: Tags
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: layouts/blog.njk
+  config:
+    required: true
 pages:
-  - pages/blog.md
+- pages/blog.md

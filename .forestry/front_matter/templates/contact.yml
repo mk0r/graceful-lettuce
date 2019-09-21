@@ -1,41 +1,41 @@
 ---
 label: Contact
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Title
-  - type: datetime
-    name: date
-    label: Date
-  - type: text
-    name: permalink
-    label: Permalink
-    description: URL of the page
-  - type: text
-    name: navtitle
-    label: Navigation item title
-  - type: list
-    name: tags
-    label: Tags
-  - type: select
-    name: section
-    label: Section
-    config:
-      source:
-        type: custom
-      options:
-        - home
-        - page
-        - blog
-        - post
-        - contact
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: layouts/contact.njk
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+- type: datetime
+  name: date
+  label: Date
+- type: text
+  name: permalink
+  label: Permalink
+  description: URL of the page
+- type: text
+  name: navtitle
+  label: Navigation item title
+- type: list
+  name: tags
+  label: Tags
+- type: select
+  name: section
+  label: Section
+  config:
+    source:
+      type: custom
+    options:
+    - home
+    - page
+    - blog
+    - post
+    - contact
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: layouts/contact.njk
+  config:
+    required: true
 pages:
-  - pages/contact.md
+- pages/contact.md

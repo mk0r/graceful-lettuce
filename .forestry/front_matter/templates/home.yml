@@ -1,36 +1,36 @@
 ---
 label: Home
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Title
-  - type: datetime
-    name: date
-    label: Date
-  - type: select
-    name: permalink
-    label: Permalink
-    description: URL of the page
-    default: /
-    config:
-      required: true
-      source:
-        type: custom
-      options:
-        - /
-  - type: text
-    name: navtitle
-    label: Navigation item title
-  - type: list
-    name: tags
-    label: Tags
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: layouts/home.njk
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+- type: datetime
+  name: date
+  label: Date
+- type: select
+  name: permalink
+  label: Permalink
+  description: URL of the page
+  default: "/"
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - "/"
+- type: text
+  name: navtitle
+  label: Navigation item title
+- type: list
+  name: tags
+  label: Tags
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: layouts/home.njk
+  config:
+    required: true
 pages:
-  - pages/home.md
+- pages/home.md
