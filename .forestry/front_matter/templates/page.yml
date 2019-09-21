@@ -1,0 +1,29 @@
+---
+label: Page
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+  - type: datetime
+    name: date
+    label: Date
+  - type: text
+    name: permalink
+    label: Permalink
+    description: URL of the page
+  - type: text
+    name: navtitle
+    label: Navigation item title
+  - type: list
+    name: tags
+    label: Tags
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: layouts/page.njk
+    config:
+      required: true
+pages:
+  - pages/about.md
